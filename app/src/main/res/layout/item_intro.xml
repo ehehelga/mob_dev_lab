@@ -24,7 +24,8 @@
         android:gravity="center"
         android:lineSpacingExtra="4sp"
         android:textColor="@color/text_color_primary"
-        android:textFontWeight="500"
-        android:textSize="24sp" />
+        android:textFontWeight="1000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
