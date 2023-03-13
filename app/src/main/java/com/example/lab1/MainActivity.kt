@@ -51,26 +51,6 @@ class MainActivity : AppCompatActivity() {
         ind2.setImageDrawable(ContextCompat.getDrawable(applicationContext, R.drawable.inactive_indicator))
         ind3.setImageDrawable(ContextCompat.getDrawable(applicationContext, R.drawable.inactive_indicator))
 
-        onboardingViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
-            override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {
-                changeIndicator()
-                super.onPageScrolled(position, positionOffset, positionOffsetPixels)
-            }
-
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-            }
-
-            override fun onPageScrollStateChanged(state: Int) {
-                super.onPageScrollStateChanged(state)
-                changeIndicator()
-            }
-
-        })
 
         textSkip = findViewById(R.id.textSkip)
         textSkip.setOnClickListener {
@@ -92,6 +72,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         onboardingViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                changeIndicator()
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels)
+            }
+
             override fun onPageSelected(position: Int) {
                 if (position == 0){
                     btnNextStep.text = "Next"
@@ -104,7 +93,13 @@ class MainActivity : AppCompatActivity() {
                 }
                 super.onPageSelected(position)
             }
+
+            override fun onPageScrollStateChanged(state: Int) {
+                super.onPageScrollStateChanged(state)
+                changeIndicator()
+            }
         })
+
 
     }
     private lateinit var indicatorsContainer: LinearLayout
