@@ -11,4 +11,5 @@
     <color name="orange">#E3562A</color>
     <color name="active">#65AAEA</color>
     <color name="nonactive">#D5D4D4</color>
+    <color name="gray">#78746D</color>
 </resources>
