@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lab1.databinding.ActivityOnboardingBinding
 
 class MyAdapter(private val onboardingItems: List<OnboardingItem>):RecyclerView.Adapter<PagerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagerViewHolder {
@@ -23,6 +24,7 @@ class MyAdapter(private val onboardingItems: List<OnboardingItem>):RecyclerView.
     }
 }
 class PagerViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    //private var binding = ActivityOnboardingBinding.inflate(R.layout.item_intro, ViewGroup?, false)
     private val imageOnboarding = itemView.findViewById<ImageView>(R.id.imageOnboarding)
     private val textTitle = itemView.findViewById<TextView>(R.id.textTitle)
 
