@@ -9,4 +9,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="training">Training</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="video">Video</string>
+    <string name="paragraph">The practice or skill of preparing food by\ncombining, mixing, and heating ingredients.\n\n<font color="#65AAEA">Example:</font> he developed an interest in cooking.</string>
 </resources>

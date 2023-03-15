@@ -1,4 +1,4 @@
-package com.example.lab1.ui.dashboard
+package com.example.lab1.ui.video
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.lab1.databinding.FragmentDashboardBinding
+import com.example.lab1.databinding.FragmentVideoBinding
 
-class DashboardFragment : Fragment() {
+class FragmentVideo : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentVideoBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,16 +22,12 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentVideoBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        binding.webView.webViewClient = MyWebViewClient()
+        binding.webView.loadUrl("https://learnenglish.britishcouncil.org/general-english/video-zone")
         return root
     }
 
