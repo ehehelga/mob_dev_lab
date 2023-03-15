@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">WordsFactory</string>
+    <string name="wordsfactory">WordsFactory</string>
+    <string name="cool_kids_on_wheels">Cool Kids On Wheels</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="e_mail">E-mail</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="training">Training</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="video">Video</string>
+    <string name="paragraph">The practice or skill of preparing food by\ncombining, mixing, and heating ingredients.\n\n<font color="#65AAEA">Example:</font> he developed an interest in cooking.</string>
 </resources>

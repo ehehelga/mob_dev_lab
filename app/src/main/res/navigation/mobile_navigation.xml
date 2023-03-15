@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/navigation_dictionary">
+
+    <fragment
+        android:id="@+id/navigation_dictionary"
+        android:name="com.example.lab1.ui.dictionary.FragmentDictionary"
+        android:label="Dictionary"
+        tools:layout="@layout/fragment_dictionary" />
+
+    <fragment
+        android:id="@+id/navigation_training"
+        android:name="com.example.lab1.ui.training.FragmentTraining"
+        android:label="Training"
+        tools:layout="@layout/fragment_training" />
+
+    <fragment
+        android:id="@+id/navigation_video"
+        android:name="com.example.lab1.ui.video.FragmentVideo"
+        android:label="Video"
+        tools:layout="@layout/fragment_video" />
+</navigation>
